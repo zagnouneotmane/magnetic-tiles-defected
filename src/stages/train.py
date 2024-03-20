@@ -20,7 +20,9 @@ def train_and_save_model(params):
     n_epochs = params.train.n_epochs
     use_cpu = params.train.use_cpu
     augmentations = params.train.augmentations
+    
     model_pickle_fpath = Path(params.train.model_pickle_fpath).absolute()
+    model_pickle_fpath.parent.mkdir(exist_ok=True)
     train_model(train_img_dir_path=train_img_dir_path,
                 train_mask_dir_path=train_mask_dir_path,
                 n_epochs=n_epochs,

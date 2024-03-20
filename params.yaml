@@ -4,7 +4,8 @@ base:
   random_state: 0
 
 data_load:
-  dataset_url: https://github.com/abin24/Magnetic-tile-defect-datasets./archive/refs/heads/master.zip
+  dataset_url: 
+    https://github.com/abin24/Magnetic-tile-defect-datasets./archive/refs/heads/master.zip
   data_dir: data
   orig_dirname: Magnetic-tile-defect-datasets.-master
   new_dirname: MAGNETIC_TILE_SURFACE_DEFECTS
@@ -21,7 +22,7 @@ train:
   valid_pct: 0.2
   learning_rate: 0.02
   batch_size: 16
-  n_epochs: 6
+  n_epochs: 9
   use_cpu: false
   model_pickle_fpath: models/model_pickle_fastai.pkl
   augmentations: {do_flip: false, flip_vert: false, max_rotate: 10.0, min_zoom: 1.0,
