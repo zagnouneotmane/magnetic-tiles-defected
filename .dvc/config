@@ -2,3 +2,4 @@
     remote = myremote
 ['remote "myremote"']
     url = s3://magnetic-tiles-defected
+    region = us-east-1
