@@ -4,11 +4,6 @@ on:
   push:
     branches:    
       - 'exp*'
-    paths:
-      - "data/**"
-      - "src/**"
-      - "params.yaml"
-      - "dvc.*"
 jobs:
   deploy-runner:
     runs-on: ubuntu-latest
@@ -57,7 +52,7 @@ jobs:
       - uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: us-east-1
-          role-to-assume: arn:aws:iam::175754385727:role/SandboxUser
+          role-to-assume: arn:aws:iam::175754385727:role/UserSeg
       - name: cml setup
         run: cml ci
         env:
